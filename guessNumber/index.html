@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <h1>Random Number Game</h1>
+
+    <form>
+      <h2>Gernerate a number between 0 and</h2>
+      <input
+        id="number-range"
+        type="number"
+        min="0"
+        placeholder="0이상 정수만 입력가능"
+      />
+      <h3>Guess the number</h3>
+      <input id="random-number" type="number" />
+      <button>play!</button>
+      <p id="result-message"></p>
+      <h4></h4>
+      <button id="reload">다시 해보기</button>
+    </form>
+  </body>
+</html>
