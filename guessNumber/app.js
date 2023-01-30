@@ -24,7 +24,6 @@ function restrictNegativeNumber() {
 }
 
 // 2번. ***** guess Number*****
-
 // 3번. 컴퓨터가 0~임의의 정수 중 하나의 랜덤한 숫자를 고름
 
 btn.addEventListener("click", getRandomNumber);
@@ -38,16 +37,20 @@ function getRandomNumber(e) {
     const randomNumberByComputer = Math.floor(
       Math.random() * randomNumberByUser
     );
-    resultMessage.innerHTML = `You chose: ${randomNumberByUser}, the machine chose:${randomNumberByComputer}`;
-    if (parseInt(randomNumberByUser) === randomNumberByComputer) {
-      h4.innerHTML = "You win!";
-    } else {
-      h4.innerHTML = "You lost..";
-    }
+    showResult(resultMessage, randomNumberByUser, randomNumberByComputer);
+  }
+}
+// 4번. 5번. ***** 결과 같은지 확인 ******
+function showResult(result, numberByUser, numberByCom) {
+  result.innerHTML = `You chose: ${numberByUser}, the machine chose:${numberByCom}`;
+  if (parseInt(numberByUser) === numberByCom) {
+    h4.innerHTML = "You win!";
+  } else {
+    h4.innerHTML = "You lost..";
   }
 }
 
-// ***** 새로 고침 *****
+// ***** 새로 고침 버튼*****
 reload.addEventListener("click", () => {
   window.location.reload();
 });
